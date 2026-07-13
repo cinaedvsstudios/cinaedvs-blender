@@ -1,0 +1,90 @@
+name: Bug report
+description: Report a reproducible problem with a CINAEDVS Blender add-on
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please complete the details below so the issue can be reproduced and fixed.
+
+  - type: dropdown
+    id: addon
+    attributes:
+      label: Add-on
+      description: Which CINAEDVS Blender add-on is affected?
+      options:
+        - CINAEDVS File Rescue
+        - Other CINAEDVS Blender add-on
+    validations:
+      required: true
+
+  - type: input
+    id: addon_version
+    attributes:
+      label: Add-on version
+      placeholder: e.g. 0.20.1
+    validations:
+      required: true
+
+  - type: input
+    id: blender_version
+    attributes:
+      label: Blender version
+      placeholder: e.g. 5.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: windows_version
+    attributes:
+      label: Windows version
+      placeholder: e.g. Windows 11 24H2
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected to happen instead.
+      placeholder: Tell us what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps that caused the problem.
+      placeholder: |
+        1. Open...
+        2. Click...
+        3. Select...
+        4. The problem appears.
+    validations:
+      required: true
+
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error messages or console output
+      description: Paste any Blender error message or console output here.
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or additional context
+      description: Drag screenshots here, or add any other useful information. Do not share private files or personal paths unless you are comfortable making them public.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I checked existing issues and did not find the same problem.
+          required: true
+        - label: I removed or obscured private file paths and personal information.
+          required: true
